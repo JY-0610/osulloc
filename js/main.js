@@ -2,10 +2,10 @@
 
 /*banner*/
 
-setImageSlide('#slide:eq(0)', 1, false, 3000);
+setImageSlide('#slide:eq(0)', 1, false);
 setImageSlide('#slide:eq(1)', 1, false);
 setImageSlide('#slide:eq(2)', 1, false);
-function setImageSlide(selector,first,status,speed){
+function setImageSlide(selector,first,status){
 
 var $selector = $(selector);
 var numSlide = $('.banner-list > li').length;
@@ -15,7 +15,7 @@ var slidePrev = 1;
 var slideNext = 0;
 var slideFirst = first;
 var timerId='';
-var timerSpeed = speed;
+var timerSpeed = 3000;
 var isTimerOn =status;
 
 $('.p-control').on('click', function() {
